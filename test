@@ -1,0 +1,376 @@
+#Часть 1. Все входные и выходные данные в заданиях этой группы являются вещественными числами.
+
+#1. Дана сторона квадрата a. Найти его периметр P = 4·a
+	def perimeter_square(a):
+    perimeter = a * 4
+    return perimeter
+a = float(input())
+result = perimeter_square(a)
+print(result)
+#2. Дана сторона квадрата a. Найти его площадь{{ S = a2}}
+	def area_square(a):
+    area = a**2
+    return area
+a = float(input())
+result = area_square(a)
+print(result)
+#3. Даны стороны прямоугольника a и b. Найти его площадь S = a·b и периметр P = 2·(a + b)
+def rectangle(a,b):
+    area  = a * b 
+    perimeter = 2 * (a+b)
+    return area,perimeter
+a,b = float(input()),float(input())
+result = rectangle(a,b)
+print(result)
+#4	Дан диаметр окружности d. Найти ее длину{{ L = π·d, π = 3.14}}
+	def circumference(d):
+    L = 3.14 * d
+    return L
+d = float(input())
+result = circumference(d)
+print(result)
+#5.       Дана длина ребра куба a. Найти объем куба V = a3 и площадь его поверхности S = 6·a2
+	def cub(a):
+    V = a**3
+    S = 6*(a**2)
+    return V,S
+a = float(input())
+result = cub(a)
+print(result)
+#6. 	Даны длины ребер a, b, c прямоугольного параллелепипеда. Найти его объем V = a·b·c и площадь #поверхности S = 2·(a·b + b·c + a·c)
+def cuboid(a,d,c):
+    V = a*b*c
+    S = 2 * ((a* b) + (b * c) + (a * c))
+    return V,S
+a,b,c = float(input()),float(input()),float(input())
+result(cuboid(a,d,c))
+print(result)
+#7.	Найти длину окружности L и площадь круга S заданного радиуса R: L = 2·π·R, S = π·R2, π=3.14
+def curcle(r):
+    circumference = 2*3.14*r
+    area = 3.14*(r**2)
+    return circumference,area
+r  = float(input())
+result = curcle(r)
+print(result)
+
+#8. 	Даны два числа a и b. Найти их среднее арифметическое: (a + b)/2
+def arithmetic_mean(a,b):
+    mean = (a+b)//2
+    return mean
+a,b = float(input()),int(input())
+result = arithmetic_mean(a,b)
+print(result)
+#9.	Даны два неотрицательных числа a и b. Найти их среднее геометрическое, т. е. квадратный корень из их произведения: (a·b)1/2
+import math
+
+def math_dem(a,b):
+    s = (a*b)** 0.5
+    s1 = math.sqrt(a*b)
+    return s,s1
+
+a,b = float(input()),float(input())
+result = math_dem(a,b)
+print(result)
+#10. Даны два ненулевых числа. Найти сумму, разность, произведение и частное их квадратов.
+
+
+a,b = float(input()),float(input())
+if a != 0 and b != 0:
+    a1,b1 = a**2,b**2
+    print("Разность:",a1 - b1,"Произведение:",a1*b1,"Частное:",a1//b1)
+
+#Часть 2. Все входные и выходные данные в заданиях этой группы являются целыми числами.
+ #Все числа, для которых указано количество цифр (двузначное число, трехзначное число и т. д.), считаются положительными.
+
+#1 Дано расстояние L в сантиметрах. Используя операцию деления нацело, найти количество полных метров в нем (1 метр = 100 см).
+
+
+def all_meters(L):
+    meters = L // 100
+    return meters
+
+L = int(input("Введите расстояние в см: "))
+result = all_meters(L)
+print("Кол-во метров:", result)
+
+#2 Дана масса M в килограммах. Используя операцию деления нацело, найти количество полных тонн в ней (1 тонна = 1000 кг).
+
+def all_tonnels(L):
+    ton = L // 1000
+    return ton
+
+L = int(input("Введите вес в килограммах: "))
+result = all_tonnes(L)
+print("Кол-во тонн:", result)
+
+#3 Дан размер файла в байтах. Используя операцию деления нацело, найти количество полных килобайтов, которые занимает данный файл (1 килобайт = 1024 байта).
+
+def all_cilobites(bite):
+    cilobites = bite // 1024
+    return cilobites
+
+bite = int(input("Введите размер файла в байтах: "))
+result = all_cilobites(bite)
+print("Кол-во килобайтов:", result)
+
+
+#4 Даны целые положительные числа A и B (A > B). 
+#На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений).
+#Используя операцию деления нацело, найти количество отрезков B, размещенных на отрезке A.
+
+def count_ab(A, B):
+    return A // B
+
+A = int(input())
+B = int(input())
+result = count_ab(A, B)
+print("Количество отрезков B, размещенных на отрезке A:", result)
+
+#5 Даны целые положительные числа A и B (A > B). 
+#На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений).
+#Используя операцию взятия остатка от деления нацело, найти длину незанятой части отрезка A.
+
+def length(A, B):
+    length = A % B
+    return length
+
+A = int(input())
+B = int(input())
+result = length(A, B)
+print("Длина незанятой части отрезка A:", result)
+
+
+#6 Дано двузначное число. Вывести вначале его левую цифру (десятки), а затем — его правую цифру (единицы). Для нахождения десятков использовать операцию деления нацело, для нахождения единиц — операцию взятия остатка от деления.
+
+number = 47
+tens = number // 10
+ones = number % 10
+print("Десятки:", tens)
+print("Единицы:", ones)
+
+#7 Дано двузначное число. Найти сумму и произведение его цифр.
+
+num = int(input("Введите двузначное число: "))
+
+tens = num // 10
+ones = num % 10
+
+sum = t
+
+#8 Дано двузначное число. Вывести число, полученное при перестановке цифр исходного числа.
+
+number = int(input("Введите двузначное число: "))
+tens = number // 10
+units = number % 10
+reversed_number = units * 10 + tens
+print("Число, полученное при перестановке цифр:", reversed_number)
+
+#9 Дано трехзначное число. Используя одну операцию деления нацело, вывести первую цифру данного числа (сотни).
+
+number = 456
+first_digit = number // 100
+print(first_digit)
+
+
+#10 Дано трехзначное число. Вывести вначале его последнюю цифру (единицы), а затем — его среднюю цифру (десятки).
+
+number = 456
+last_digit = number % 10
+middle_digit = (number // 10) % 10
+print("Последняя цифра:", last_digit)
+print("Средняя цифра:", middle_digit)
+
+#Часть 3. Во всех заданиях данной группы требуется вывести логическое значение True, если приведенное высказывание для предложенных исходных данных является истинным, и значение False в противном случае. Все числа, для которых указано количество цифр (двузначное число, трехзначное число и т. д.), считаются целыми положительными.
+
+#Дано целое число A. Проверить истинность высказывания: «Число A является положительным».
+
+def all_true(A):
+    is_true =  A >0
+    return is_true
+
+A = int(input())
+result = all_true(A)
+print(result)
+
+#Дано целое число A. Проверить истинность высказывания: «Число A является нечетным».
+
+def all_true(A):
+    is_true = A % 2 != 0
+    return is_true
+
+A = int(input())
+result = all_true(A)
+print(result)
+
+#Дано целое число A. Проверить истинность высказывания: «Число A является четным».
+def all_true(A):
+    is_true = A % 2 == 0  
+    return is_true
+
+A = int(input())
+result = all_true(A)
+print(result) 
+
+
+#Даны два целых числа: A, B. Проверить истинность высказывания: «Справедливы неравенства A > 2 и B ≤ 3».
+def all_true(A,B):
+    is_true = A > 2 and B <= 3
+    return is_true
+A = int(input())
+B = int(input())
+result = all_true(A,B)
+print(result)
+
+
+#Даны два целых числа: A, B. Проверить истинность высказывания: «Справедливы неравенства A ≥ 0 или B < −2».
+
+def all_true(A,B):
+    is_true = A >= 0 or B < -2
+    return is_true
+
+
+
+A = int(input("Введите целое число A: "))
+B = int(input("Введите целое число B: "))
+
+result = all_true(A,B)
+print(result)
+
+#Даны три целых числа: A, B, C. Проверить истинность высказывания: «Справедливо двойное неравенство A < B < _C_».
+def all_true(A,B,C):
+    is_true = A < B < C
+    return is_true
+
+A = int(input())
+B = int(input())
+C = int(input())
+
+result = (all_true(A,B,C))
+print(result)
+
+
+#Даны три целых числа: A, B, C. Проверить истинность высказывания: «Число B находится между числами A и _C_».
+
+def check_between_numbers(a, b, c):
+    is_true = a < b < c or c < b < a
+    return is_true
+
+A = int(input())
+B = int(input())
+C = int(input())
+result = check_between_numbers(A,B.C)
+print(result)
+
+
+
+#Даны два целых числа: A, B. Проверить истинность высказывания: «Каждое из чисел A и B нечетное».
+
+def all_true(A,B):
+    is_true = A % 2 != 0 and B % 2 != 0
+    return is_true
+A = int(input())
+B = int(input())
+
+result = (all_true(A,B))
+print(result)
+
+
+
+#Даны два целых числа: A, B. Проверить истинность высказывания: «Хотя бы одно из чисел A и B нечетное».
+
+def all_true(A,B):
+    is_true = A % 2 != 0 or B % 2 != 0
+    return is_true
+A = int(input())
+B = int(input())
+
+result = (all_true(A,B))
+print(result)
+
+
+#Даны два целых числа: A, B. Проверить истинность высказывания: «Ровно одно из чисел A и B нечетное»
+
+def all_true(A,B):
+    is_true = (A % 2 != 0 and B % 2 == 0) or (A % 2 == 0 and B % 2 != 0)
+    return is_true
+A = int(input())
+B = int(input())
+
+result = (all_true(A,B))
+print(result)
+
+#Часть 4. Списки
+
+#1 Используя операции индексирования и среза выведите на экран первый и третий элементы списка [1, 2, 3 ,4 ,5], а также срез списка из первых трех элементов.
+
+my_list = [1, 2, 3, 4, 5]
+print(my_list[0])  
+print(my_list[2])  
+print(my_list[:3])  
+
+#2 Дан список [«Ростов», «+», «на», «-», «Дону»]. Исправьте плюс на дефис и выведите название города на экран использовав доступ к элементам списка по индексам
+
+my_list = ["Ростов", "+", "на", "-", "Дону"]
+my_list[1] = "-"
+print(my_list[0] + " " + my_list[1] + " " + my_list[2] + " " + my_list[3] + " " + my_list[4])
+
+#3 Дан список [«a», «s», «1», «a», «32», «23»]. Разбейте его на два списка: только с буквами и только с числами. 
+
+org_list = ["a", "s", "1", "a", "32", "23"]
+let_list = []
+num_list = []
+
+for i in org_list:
+    if i.isalpha():
+        let_list.append(i)
+    elif i.isdigit():
+        num_list.append(item)
+
+print("Список букв:", let_list)
+print("Список чисел:", num_list)
+
+
+#4 В предыдущей задаче должен был получиться список из букв. Используя методы списков: удалите из него последний элемент, сделайте реверсию списка.
+
+let = ["a", "s", "1", "a", "32", "23"]
+let.pop()  
+let.reverse()  
+print(let) 
+
+#5 Преобразуйте список [«a», «s», «1», «a», «32», «23»] в set и выведите на экран. Что изменилось?
+
+my_list = ["a", "s", "1", "a", "32", "23"]
+my_set = set(my_list)
+print(my_set)
+#Часть 5. Словари
+
+#1 Создайте словарь содержащий данные о человеке. В качестве строковых ключей используйте его имя, возраст, пол, рост, вес, размер ноги.
+
+person = {
+"имя": "Лера",
+"возраст": 21,
+"пол": "женский",
+"рост": 165,
+"вес": 52,
+"размер ноги": 36
+}
+
+
+#2 Выведите на экран все данные о человеке по ключам.
+
+keys = ["имя", "возраст","пол","рост","вес","размер ноги"]
+
+for key in keys:
+    if key in person:
+        print(person[key])
+    else:
+        print(f"Ключ '{key}' отсутствует в словаре.")
+
+#3 Добавьте в словарь ключ и значение размера ноги
+
+person["размер ноги"] = 37
+
+#4 Удалите из словаря возраст.
+
+person.pop("возраст")
